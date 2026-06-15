@@ -1,0 +1,40 @@
+# Quickstart Guide
+
+Get up and running with Oasis-Shell in under 3 minutes.
+
+## 1. Prerequisites
+
+Before installing Oasis-Shell, ensure you have the following installed on your system:
+- **Rust Toolchain:** Version 1.70+
+- **Node.js:** Version 18+ (for the Tauri frontend bridge)
+- **Local LLM Runner:** [Ollama](https://ollama.ai/) must be running locally to power the Sentient Vault.
+
+## 2. Installation
+
+Clone the repository and install the Node dependencies:
+
+```bash
+git clone https://github.com/jibin7jose/Oasis-Shell.git
+cd Oasis-Shell
+npm install
+```
+
+## 3. Pulling the Local Models
+
+Oasis-Shell relies entirely on local models to ensure 100% offline determinism and risk coverage. Open your terminal and pull the required Ollama models:
+
+```bash
+ollama pull llama3
+ollama pull llava
+ollama pull nomic-embed-text
+```
+
+## 4. Booting the Foundry Kernel
+
+With the models running in the background, you can now launch the Oasis-Shell OS environment:
+
+```bash
+npm run tauri dev
+```
+
+You should now see the beautifully crafted glassmorphic interface. Press `Ctrl+K` to launch your first Neural Directive!
