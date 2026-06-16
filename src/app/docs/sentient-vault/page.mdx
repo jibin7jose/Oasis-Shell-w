@@ -19,6 +19,7 @@ Using the Neural Command Bar (`Ctrl + K`), you can interact directly with the Va
 
 ### Secure Sentinel Vault & Hardware Identity
 Oasis-Shell allows you to "seal a strategic asset". This completely relocates critical files off your public desktop/drives, encrypts them using `AES-256-GCM`, and securely moves them into a native `OasisVault` folder.
+- **Cryptographic Engine (`vault.rs`)**: For environment variables and API keys, the Vault utilizes strict **AES-256-GCM** encryption. It dynamically derives a cryptographic key using **PBKDF2** combined with your `OASIS_FOUNDER_SECRET` and a secure random Salt. It also supports secure Envelope Backup/Restore manifests, ensuring your neural secrets are completely tamper-proof.
 - **Biometric Hardware Anchor**: To unlock the Sentinel Ledger, the OS natively calls upon a `trigger_biometric_scan` payload. You must explicitly authenticate using Windows Hello or your system fingerprint scanner to prove your physical "Founder Presence" before decrypting the files.
 - **Forensic Audit Trails**: The vault maintains a strict cryptographic ledger, logging all accesses, encryption hashes, and security resonance telemetry to ensure complete integrity.
 
