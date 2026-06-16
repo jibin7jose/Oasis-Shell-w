@@ -1,0 +1,43 @@
+# OS Architecture
+
+Oasis-Shell is designed as a hybrid architecture built for maximum local performance and AI agency.
+
+## The Frontend (Tauri + React)
+
+The UI is a lightweight WebView layer managed by Tauri. It uses React and Framer Motion to deliver 120fps animations and a VS Code-like aesthetic. It communicates with the host OS purely through native Rust commands.
+
+## The Backend (Rust)
+
+The entire OS daemon is written in Rust for absolute memory safety and zero-overhead performance.
+
+### The Golem Workforce
+Instead of relying on a single conversational AI, Oasis-Shell splits tasks across a "Golem Workforce" (written in Rust/Tokio) that runs autonomously in the background:
+
+1. **Autonomous Agents**: You can hatch a Golem via `hatch_autonomous_golem` which traps an LLM (like `gemma4`) in a continuous background loop. It receives a mission and can execute PowerShell commands directly on your OS to fulfill that mission without user intervention.
+2. **Neural Workforce Panel**: An interactive UI overlay that allows you to monitor the active tasks of all hatched Golems. If a Golem generates a codebase refactor, it submits a **"Neural PR"** (Proposal). You can review the proposed changes and rationale side-by-side and click "Merge Neural PR" to execute the git integration natively via `execute_golem_manifest`.
+3. **Aegis Nexus (Portfolio Pulse)**: A comprehensive dashboard that tracks all active Omni-Ventures across your network. It features **P2P Neural Mirroring** (which requires explicit Founder Vault Authentication) to sync venture state across distributed collective nodes, and uses AI for Cross-Venture Synergy Detection.
+### Artificial Intelligence Modules (`ai.rs` & `nexus.rs`)
+- **Sentient Terminal & Unix Emulation**: The `TerminalPanel` doesn't just pass text; it intercepts and translates Unix/Linux commands into native PowerShell. This "Command Expansion Pack" allows you to seamlessly use `ls`, `grep`, `tail`, `touch`, `killall`, `base64`, and `zip` on Windows without installing WSL or GitBash. It also features automatic stack trace interception, where the `analyze_terminal_error` command uses the AI to diagnose and heal compilation errors dynamically.
+- **Clickable Reality (Global OCR Vision)**: Accessed via `Ctrl+Shift+F`, the OS natively captures a high-fidelity screen tensor and pipes it through a localized `Tesseract.js` engine. It calculates the exact geometric bounding boxes (`BBox`) of every word on your screen, allowing you to instantly search, highlight, and copy text from unselectable elements (like images or videos) using an interactive WebGL overlay.
+- **Proactive Sentience Daemon**: A continuous background thread that monitors system telemetry and git states to offer proactive suggestions. For example, if RAM exceeds 90%, it suggests crating inactive browsers. If you have >= 5 uncommitted files, it suggests a `git` diagnostic branch. It even detects weekend vs. weekday hours and suggests swapping your active "Hardware Aura" (RGB profiles/performance modes) using native PowerShell scripts.
+- **Autonomous Git Commit Engine**: By analyzing the raw output of `git diff`, the AI categorizes the commit type (e.g., UI tweaks become `ui: refine component styles`, logic fixes become `fix: resolve runtime issues`) and automatically pushes the code.
+- **Background File Watcher**: A native OS `notify` watcher automatically scans your `Documents`, `Downloads`, and `Desktop` folders. Any `txt`, `md`, or `ts` file added or modified is instantly parsed and embedded into your local vector database—zero clicks required.
+## Technologies and Languages Used
+
+Oasis-Shell is engineered using a combination of modern, high-performance languages and frameworks to achieve its native capabilities and seamless user interface.
+
+### Backend (System & Core Logic)
+- **Rust (Tauri Framework)**: The core OS integration, system hooks, and backend logic are written entirely in Rust. This ensures zero-overhead performance, strict memory safety, and raw speed when interfacing with the underlying operating system.
+- **SQLite (Rusqlite)**: Used for embedded, hyper-fast local database storage. It seamlessly handles state management, vector data (echo memory), and configuration persistence.
+- **Tokio**: The asynchronous runtime for Rust, allowing the OS daemon to handle concurrent processes, file monitoring, and background tasks efficiently without blocking.
+
+### Frontend (User Interface)
+- **TypeScript / TSX**: Provides robust end-to-end type safety for the user interface components.
+- **React**: Drives the reactive, modular UI layer, rendering complex state changes instantly.
+- **Tailwind CSS**: Utilized for rapid, utility-first styling to maintain the VS Code-inspired glassmorphic aesthetic.
+- **Framer Motion & GSAP**: Empowers the UI with fluid, 120fps micro-animations and physics-based transitions, giving the OS a sentient, living feel.
+- **Three.js & React-Force-Graph**: Handles the complex 3D visualization of the neural networks and strategic cortex directly in the WebView.
+
+### Build & Utility
+- **Vite**: The ultra-fast build tool and development server for the frontend layer.
+- **PowerShell (PS1)**: Used for specialized system-level synchronization and automation scripts on Windows environments.

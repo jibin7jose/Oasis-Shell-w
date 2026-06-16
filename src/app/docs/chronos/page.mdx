@@ -1,0 +1,26 @@
+# Chronos Time Machine & Executive Cortex
+
+Chronos is the system state archival mechanism within Oasis-Shell. It acts as a DVR for your operating system's exact workflow state.
+
+## State Snapshots
+
+Periodically, or when manually triggered, Oasis-Shell captures a **Chronos Snapshot** and archives it in the SQLite database (`chronos_history`). A snapshot contains:
+- **Active Windows**: The exact X/Y coordinates, width, height, and title of every open window.
+- **Venture Metrics**: Hardware consumption and project activity levels.
+- **Market Intelligence**: Background polling of tech momentum (BTC/ETH prices, sentiment).
+
+## Context Restoration & Crate Naming
+
+When you save a workspace, Oasis-Shell passes the window titles to your local LLM (e.g., `gemma4`) to automatically generate a punchy, 3-4 word title for your context (e.g., *"Market Research Pulse"* or *"Figma UI & React Dev"*). 
+
+When you restore a "Context Crate", Oasis-Shell doesn't just open files. It interacts natively with the OS:
+1. **Process Spawning**: It physically spawns the executables of your saved apps, deliberately filtering out core OS dependencies (like `explorer.exe` or `SearchHost.exe`) to prevent system crashes.
+2. **Win32 Pixel-Perfect Bounds**: A background thread polls the newly opened windows via `EnumWindows`, hooks into them, and issues `SetWindowPos` to force the apps back into the exact pixel-perfect X/Y coordinates and Width/Height bounds they were in when you saved the crate.
+
+### Neural Intent Commands (`Ctrl + K`)
+
+#### Executive & Cortex Analytics
+- **`arr`** / **`runway`** / **`metrics`**: Triggers an Executive Metrics Audit to give you an overview of the current simulated or active venture metrics (e.g., Burn Rate, Runway).
+- **`intel`** / **`market`** / **`competitors`**: Initiates a sync with the Market Intelligence Bridge to provide a readout of global tech/AI market momentum.
+- **`graph`** / **`cortex`** / **`3d`**: Launches the 3D Strategic Cortex visualization, mapping your tasks, modules, and vaults in an interactive 3D Force Graph.
+- **`deploy`**: Initiates the Deployment Sentinel to sync the Edge Cluster or push the current venture to production.

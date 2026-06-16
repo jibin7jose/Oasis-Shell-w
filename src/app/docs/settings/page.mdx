@@ -1,0 +1,17 @@
+# Settings & Telemetry
+
+Oasis-Shell allows for deep configuration of its background daemon and system telemetry.
+
+## System Telemetry
+
+Oasis-Shell constantly monitors your hardware health (CPU, RAM) and active processes. This telemetry data feeds directly into the AI Engine, allowing the OS to optimize performance dynamically.
+
+- **Process Prioritization**: The `priority_audit` and `priority_cache` databases log exactly which apps are consuming resources. The AI can automatically suspend background tasks if your active game or IDE needs more power.
+- **App Usage Analytics**: Track your focus time across different applications automatically.
+
+## Settings Configuration
+
+From the settings icon in the bottom toolbar, you can:
+1. Adjust the local LLM parameters (Ollama server URL, Context Window Size).
+2. Toggle global shortcuts.
+3. Manage the retention policy of the Echo Memory database to save disk space.

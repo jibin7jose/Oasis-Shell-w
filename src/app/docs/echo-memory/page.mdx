@@ -1,0 +1,28 @@
+# Echo Memory & Clipboard History
+
+Oasis-Shell never forgets. It runs a persistent background daemon that seamlessly logs and indexes your clipboard and active application states, creating an **Echo Memory**.
+
+## How Echo Memory Works
+
+Echo memory actively tracks the last 100 clipboard entries (text) and your application focus time into a local SQLite Database (`oasis_crates.db`). 
+
+When you use the AI to query something like *"What was that link I copied 10 minutes ago?"*, Oasis-Shell uses Semantic Search to fetch it directly from the Echo Memory vault.
+
+### Core Tracking Features
+- **Clipboard Audits:** Automatically intercepts and stores textual clipboard data. (Access with **`Ctrl + Shift + V`**)
+- **Window Telemetry:** Tracks `focus_time_seconds` and `window_title` to know what you were working on.
+- **Vector Embeddings:** Important data is vectorized into the `file_embeddings` table to ensure the AI understands the context.
+
+## Photographic Memory & LLaVA Vision Engine
+
+Alongside textual Echo Memory, Oasis-Shell runs a powerful background vision thread. Every 60 seconds, it natively captures a high-fidelity PNG of your monitors. 
+
+Rather than just saving images, it instantly pipes the `base64` frame directly into a local **LLaVA Vision Model** (via Ollama) with the prompt: *"Briefly describe what the user is doing on their screen right now in 1 sentence. Focus on apps, code, or context."*
+
+The AI's 1-sentence conclusion is then mathematically embedded using `nomic-embed-text` and stored alongside the image. This means your computer "watches" you work and creates a semantic, searchable visual timeline of your day.
+
+### Neural Intent Commands for Memory
+Using the Neural Command Bar (`Ctrl + K`):
+- **`recall [query]`** / **`do you remember [query]`** / **`what was i looking at`**: Queries the AI to retrieve information specifically from your past visual and semantic history.
+- **`rewind`** / **`time machine`**: Opens the interactive Photographic Memory Time Machine UI, allowing you to scroll back through visual snapshots of your workflow.
+- **`vision`** / **`look`** / **`see`** / **`screen`**: Triggers an immediate screen analysis. The AI takes a screenshot of your active workspace and provides a highly technical, actionable summary of what you are currently viewing.

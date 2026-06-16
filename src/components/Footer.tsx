@@ -7,7 +7,7 @@ export function Footer() {
         <div className="col-span-1 md:col-span-2">
           <div className="flex items-center space-x-3 mb-6">
             <div className="w-10 h-10 flex items-center justify-center overflow-hidden rounded-lg">
-              <Image src="/logo.svg" alt="Oasis-Shell Logo" width={40} height={40} className="object-contain" />
+              <Image src="/logo.svg" alt="Oasis-Shell Logo" width={40} height={40} className="object-contain dark:invert" />
             </div>
             <span className="text-xl font-bold tracking-tight text-gray-900 dark:text-white">Oasis-Shell</span>
           </div>
@@ -20,8 +20,10 @@ export function Footer() {
           <h4 className="font-semibold text-gray-900 dark:text-white mb-4">Resources</h4>
           <ul className="space-y-3">
             <li><a href="/docs" className="text-gray-500 dark:text-gray-400 hover:text-emerald-600 dark:hover:text-emerald-400 transition-colors">Documentation</a></li>
-            <li><a href="#" className="text-gray-500 dark:text-gray-400 hover:text-emerald-600 dark:hover:text-emerald-400 transition-colors">API Reference</a></li>
-            <li><a href="#" className="text-gray-500 dark:text-gray-400 hover:text-emerald-600 dark:hover:text-emerald-400 transition-colors">Changelog</a></li>
+            <li><a href="/docs/architecture" className="text-gray-500 dark:text-gray-400 hover:text-emerald-600 dark:hover:text-emerald-400 transition-colors">OS Architecture</a></li>
+            <li><a href="/docs/shortcuts" className="text-gray-500 dark:text-gray-400 hover:text-emerald-600 dark:hover:text-emerald-400 transition-colors">Global Shortcuts</a></li>
+            <li><a href="/#features" className="text-gray-500 dark:text-gray-400 hover:text-emerald-600 dark:hover:text-emerald-400 transition-colors">Features Overview</a></li>
+            <li><a href="https://github.com/jibin7jose/Oasis-Shell/releases" target="_blank" rel="noreferrer" className="text-gray-500 dark:text-gray-400 hover:text-emerald-600 dark:hover:text-emerald-400 transition-colors">Changelog</a></li>
           </ul>
         </div>
 
@@ -37,7 +39,7 @@ export function Footer() {
       
       <div className="max-w-7xl mx-auto px-6 mt-16 pt-8 border-t border-gray-200/50 dark:border-white/10 flex flex-col md:flex-row items-center justify-between">
         <p className="text-sm text-gray-500 dark:text-gray-500">
-          © {new Date().getFullYear()} Jibin Jose. Released under MIT License.
+          © {new Date().getFullYear()} Oasis-Shell. Developed by Jibin Jose.
         </p>
         <div className="flex items-center space-x-6 mt-4 md:mt-0 text-sm text-gray-500 dark:text-gray-500">
           <a href="#" className="hover:text-gray-900 dark:hover:text-white transition-colors">Privacy Policy</a>

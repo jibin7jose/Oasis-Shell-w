@@ -1,0 +1,21 @@
+# Global and Application Shortcuts
+
+Oasis-Shell utilizes a powerful shortcut system via `tauri-plugin-global-shortcut` for OS-wide commands, and custom React event listeners for localized quick actions. These shortcuts are designed to provide a friction-free, developer-centric experience.
+
+### Global Shortcuts (Works anywhere in the OS)
+- **`Ctrl + Space`** (or `Cmd + Space`): Toggles the Main Sentient Window / Command Palette.
+- **`Ctrl + Shift + Space`**: Toggles the secondary Cortex View (Main Window).
+- **`Ctrl + \``** (Control + Backtick): Instantly opens the Sentient Terminal over your current screen.
+
+### Application Shortcuts (Works inside Oasis-Shell)
+- **`Ctrl + K`** (or `Cmd + K`): Focus the Neural Intent Command Bar.
+- **`Ctrl + Shift + T`**: Toggles the Sentient Terminal (VS Code muscle memory).
+- **`Ctrl + Shift + G`**: Opens the 3D Strategic Cortex Graph.
+- **`Ctrl + Shift + V`**: Opens the Echo Memory Clipboard History.
+- **`Ctrl + Shift + F`**: Opens Clickable Reality. This triggers a global OCR scan of your entire physical screen, extracting all visible text and allowing you to interact with unselectable elements natively.
+- **`Ctrl + Alt + D`** (or **`F4`**): Toggles the Bottom Taskbar Dock.
+- **`Ctrl + Shift + J`**: Opens the JARVIS Voice Assistant overlay. This hooks directly into the browser-native `Web Speech API` (`webkitSpeechRecognition`), enabling continuous voice-to-text streams that pipe directly into the Neural Intent parser.
+- **`Escape`**: Dismisses active overlays (Command Palette, Terminal, JARVIS).
+
+### Why Keyboard First?
+By hooking into the native OS layers and mapping frequent actions to memory-friendly combinations, Oasis-Shell behaves like a true, fast-access Operating System layer. You don't need to break your flow—simply press the shortcut and the AI will scan your current context immediately.

@@ -8,6 +8,10 @@ export function Features() {
     <section id="features" className="py-24 bg-white dark:bg-[#030712]">
       <div className="max-w-6xl mx-auto px-6 space-y-32">
         
+        <div className="text-center mb-16">
+          <h2 className="text-5xl font-bold text-gray-900 dark:text-white mb-6">Code with rich features.</h2>
+        </div>
+
         {/* Feature 1: Sentient AI (Copilot equivalent) */}
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
           <motion.div
@@ -39,21 +43,9 @@ export function Features() {
             whileInView={{ opacity: 1, scale: 1 }}
             viewport={{ once: true, margin: "-100px" }}
             transition={{ duration: 0.6 }}
-            className="bg-gray-50 dark:bg-[#1e1e1e] p-6 rounded-2xl border border-gray-200 dark:border-gray-800 shadow-2xl relative overflow-hidden"
+            className="relative overflow-hidden"
           >
-            <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-emerald-400 to-teal-500"></div>
-            <div className="flex items-center gap-4 bg-white dark:bg-[#252526] p-4 rounded-xl border border-gray-100 dark:border-gray-800 shadow-sm">
-              <Brain className="w-6 h-6 text-emerald-500" />
-              <div className="flex-1">
-                <div className="text-sm text-gray-500 dark:text-gray-400 mb-1">Neural Intent</div>
-                <div className="text-gray-900 dark:text-white font-mono text-sm">"Deploy current workspace to Vercel"</div>
-              </div>
-            </div>
-            <div className="mt-6 space-y-3 pl-12 border-l-2 border-emerald-500/30">
-              <div className="text-xs font-mono text-gray-500 dark:text-gray-400">⚡ Extracting context from VS Code...</div>
-              <div className="text-xs font-mono text-gray-500 dark:text-gray-400">⚡ Identifying Next.js framework...</div>
-              <div className="text-xs font-mono text-emerald-600 dark:text-emerald-400 font-bold">✓ Executing deployment sentinel.</div>
-            </div>
+            <img src="/Screenshot 2026-06-15 111005.png" alt="Oasis-Shell Terminal Integration" className="w-full h-auto rounded-xl shadow-2xl border border-gray-200 dark:border-[#333333]"/>
           </motion.div>
         </div>
 
@@ -64,27 +56,9 @@ export function Features() {
             whileInView={{ opacity: 1, scale: 1 }}
             viewport={{ once: true, margin: "-100px" }}
             transition={{ duration: 0.6 }}
-            className="bg-gray-50 dark:bg-[#1e1e1e] p-6 rounded-2xl border border-gray-200 dark:border-gray-800 shadow-2xl order-2 lg:order-1 relative"
+            className="order-2 lg:order-1 relative"
           >
-            <div className="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/cubes.png')] opacity-5"></div>
-            <div className="grid grid-cols-2 gap-4">
-               <div className="bg-white dark:bg-[#252526] p-4 rounded-xl border border-gray-100 dark:border-gray-800 shadow-sm flex flex-col items-center justify-center aspect-square gap-3 hover:scale-105 transition-transform cursor-pointer">
-                  <Eye className="w-8 h-8 text-indigo-500" />
-                  <span className="text-sm font-semibold text-gray-900 dark:text-white">Vision Inference</span>
-               </div>
-               <div className="bg-white dark:bg-[#252526] p-4 rounded-xl border border-gray-100 dark:border-gray-800 shadow-sm flex flex-col items-center justify-center aspect-square gap-3 hover:scale-105 transition-transform cursor-pointer">
-                  <Database className="w-8 h-8 text-blue-500" />
-                  <span className="text-sm font-semibold text-gray-900 dark:text-white">Sentient Vault</span>
-               </div>
-               <div className="bg-white dark:bg-[#252526] p-4 rounded-xl border border-gray-100 dark:border-gray-800 shadow-sm flex flex-col items-center justify-center aspect-square gap-3 hover:scale-105 transition-transform cursor-pointer">
-                  <Globe className="w-8 h-8 text-purple-500" />
-                  <span className="text-sm font-semibold text-gray-900 dark:text-white">Context Crates</span>
-               </div>
-               <div className="bg-white dark:bg-[#252526] p-4 rounded-xl border border-gray-100 dark:border-gray-800 shadow-sm flex flex-col items-center justify-center aspect-square gap-3 hover:scale-105 transition-transform cursor-pointer">
-                  <Command className="w-8 h-8 text-pink-500" />
-                  <span className="text-sm font-semibold text-gray-900 dark:text-white">Voice Engine</span>
-               </div>
-            </div>
+            <img src="/Screenshot 2026-06-15 111021.png" alt="Oasis-Shell System Dashboard" className="w-full h-auto rounded-xl shadow-2xl border border-gray-200 dark:border-[#333333]"/>
           </motion.div>
           <motion.div
             initial={{ opacity: 0, x: 30 }}
@@ -105,6 +79,56 @@ export function Features() {
             <a href="/docs/architecture" className="inline-flex items-center gap-2 text-indigo-600 dark:text-indigo-400 font-semibold hover:underline">
               Learn about the Vision Engine →
             </a>
+          </motion.div>
+        </div>
+
+        {/* Feature 3: Extensible Developer Architecture */}
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+          <motion.div
+            initial={{ opacity: 0, x: -30 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true, margin: "-100px" }}
+            transition={{ duration: 0.6 }}
+          >
+            <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-gray-700 to-gray-900 flex items-center justify-center mb-6 shadow-lg">
+              <Command className="w-6 h-6 text-white" />
+            </div>
+            <h2 className="text-4xl md:text-5xl font-bold text-gray-900 dark:text-white mb-6 tracking-tight">
+              Built for Developers.
+            </h2>
+            <p className="text-xl text-gray-600 dark:text-gray-400 mb-6 leading-relaxed">
+              Oasis-Shell is completely open-source and deeply customizable. Write your own Sentinels in Rust, hook into the Native LLM Engine, and extend the OS capabilities instantly.
+            </p>
+            <a href="https://github.com/jibin7jose/Oasis-Shell" className="inline-flex items-center gap-2 text-gray-900 dark:text-white font-semibold hover:underline">
+              View the source code →
+            </a>
+          </motion.div>
+          <motion.div
+            initial={{ opacity: 0, scale: 0.95 }}
+            whileInView={{ opacity: 1, scale: 1 }}
+            viewport={{ once: true, margin: "-100px" }}
+            transition={{ duration: 0.6 }}
+            className="bg-[#1e1e1e] p-4 rounded-2xl border border-[#333] shadow-2xl overflow-hidden font-mono text-sm"
+          >
+            <div className="flex items-center gap-2 mb-4 px-2">
+              <div className="w-3 h-3 rounded-full bg-[#ff5f56]"></div>
+              <div className="w-3 h-3 rounded-full bg-[#ffbd2e]"></div>
+              <div className="w-3 h-3 rounded-full bg-[#27c93f]"></div>
+              <span className="ml-2 text-xs text-gray-500">src-tauri/src/ai.rs</span>
+            </div>
+            <pre className="text-[#d4d4d4] overflow-x-auto p-2">
+              <span className="text-[#569cd6]">pub async fn</span> <span className="text-[#dcdcaa]">rag_query</span>(query: <span className="text-[#4ec9b0]">String</span>) -&gt; <span className="text-[#4ec9b0]">Result</span>&lt;<span className="text-[#4ec9b0]">String</span>, <span className="text-[#4ec9b0]">String</span>&gt; {`{`}<br/>
+              {"    "}<span className="text-[#6a9955]">// 1. Generate semantic embeddings locally</span><br/>
+              {"    "}<span className="text-[#569cd6]">let</span> embedding <span className="text-[#d4d4d4]">=</span> <span className="text-[#4ec9b0]">VectorDB</span>::<span className="text-[#dcdcaa]">generate</span>(&amp;query).<span className="text-[#c586c0]">await</span>?;<br/>
+              {"    "}<span className="text-[#569cd6]">let</span> context <span className="text-[#d4d4d4]">=</span> <span className="text-[#4ec9b0]">WorkspaceManager</span>::<span className="text-[#dcdcaa]">scan_windows</span>();<br/><br/>
+              {"    "}<span className="text-[#6a9955]">// 2. Route intent to specialized Sentinels</span><br/>
+              {"    "}<span className="text-[#c586c0]">if</span> query.<span className="text-[#dcdcaa]">contains</span>(<span className="text-[#ce9178]">"deploy"</span>) {`{`}<br/>
+              {"        "}<span className="text-[#4ec9b0]">DeploymentSentinel</span>::<span className="text-[#dcdcaa]">trigger</span>(context).<span className="text-[#c586c0]">await</span>;<br/>
+              {"    "}{`}`} <span className="text-[#c586c0]">else</span> {`{`}<br/>
+              {"        "}<span className="text-[#4ec9b0]">LocalLLM</span>::<span className="text-[#dcdcaa]">infer_action</span>(embedding).<span className="text-[#c586c0]">await</span>;<br/>
+              {"    "}{`}`}<br/>
+              {`}`}
+            </pre>
           </motion.div>
         </div>
 

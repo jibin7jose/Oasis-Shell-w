@@ -1,7 +1,7 @@
 "use client";
 
 import * as React from "react";
-import { Moon, Sun, Laptop } from "lucide-react";
+import { Moon, Sun } from "lucide-react";
 import { useTheme } from "next-themes";
 
 export function ThemeToggle() {
@@ -13,7 +13,7 @@ export function ThemeToggle() {
   }, []);
 
   if (!mounted) {
-    return <div className="w-[104px] h-10 bg-gray-200 dark:bg-gray-800 rounded-full animate-pulse" />;
+    return <div className="w-[72px] h-10 bg-gray-200 dark:bg-gray-800 rounded-full animate-pulse" />;
   }
 
   return (
@@ -29,17 +29,7 @@ export function ThemeToggle() {
       >
         <Sun className="w-4 h-4" />
       </button>
-      <button
-        onClick={() => setTheme("system")}
-        className={`p-1.5 rounded-full transition-all duration-300 ${
-          theme === "system" 
-            ? "bg-white dark:bg-gray-700 text-emerald-600 dark:text-emerald-400 shadow-sm" 
-            : "text-gray-400 hover:text-gray-900 dark:hover:text-white"
-        }`}
-        aria-label="System Mode"
-      >
-        <Laptop className="w-4 h-4" />
-      </button>
+
       <button
         onClick={() => setTheme("dark")}
         className={`p-1.5 rounded-full transition-all duration-300 ${

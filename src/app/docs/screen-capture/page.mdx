@@ -1,0 +1,11 @@
+# Screen Capture & Vision Engine
+
+Oasis-Shell isn't just text-based. With the integrated Vision Engine, the OS can "see" your screen.
+
+## Photographic Memory
+
+When enabled, Oasis-Shell takes scheduled visual snapshots of your active windows. These screenshots are stored securely on your local disk and metadata is logged into the `photographic_memory` SQLite database.
+
+### Core Features:
+- **Instant Capture**: Manually trigger a screen capture from the bottom toolbar icon.
+- **Visual Question Answering**: Ask the AI questions about what is currently visible on your screen (e.g., "What error is shown in the terminal window right now?"). The local vision model will analyze the latest capture and respond.

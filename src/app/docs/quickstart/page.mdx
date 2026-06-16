@@ -1,40 +1,25 @@
-# Quickstart Guide
+# How to Install Oasis-Shell
 
-Get up and running with Oasis-Shell in under 3 minutes.
+Welcome to the future of operating systems. Installing Oasis-Shell is straightforward and requires no complex dependencies since the AI models run entirely on your local machine using standard LLM runtimes.
 
-## 1. Prerequisites
+## Step 1: Download the Application
 
-Before installing Oasis-Shell, ensure you have the following installed on your system:
-- **Rust Toolchain:** Version 1.70+
-- **Node.js:** Version 18+ (for the Tauri frontend bridge)
-- **Local LLM Runner:** [Ollama](https://ollama.ai/) must be running locally to power the Sentient Vault.
+You can download the compiled executable (`.exe` file) directly from our website. 
 
-## 2. Installation
+1. Click the **"Download OS"** button on the top right of the navigation bar.
+2. Wait for the `Oasis-Shell-Installer.exe` to download.
 
-Clone the repository and install the Node dependencies:
+*(Developer Note: To serve the .exe file from the website, place your `.exe` file into the `public/` folder of this website codebase, and rename it to `Oasis-Shell-Installer.exe`. Then the Download button will automatically serve it!)*
 
-```bash
-git clone https://github.com/jibin7jose/Oasis-Shell.git
-cd Oasis-Shell
-npm install
-```
+## Step 2: Run the Installer
 
-## 3. Pulling the Local Models
+1. Double click the downloaded `.exe` file.
+2. If Windows SmartScreen warns you about an unrecognized app, click **More info** and then **Run anyway**.
+3. Follow the setup wizard to install the application to your local disk.
 
-Oasis-Shell relies entirely on local models to ensure 100% offline determinism and risk coverage. Open your terminal and pull the required Ollama models:
+## Step 3: Launch Oasis-Shell
 
-```bash
-ollama pull llama3
-ollama pull llava
-ollama pull nomic-embed-text
-```
+Once installed, Oasis-Shell will run in the background. You can bring up the **Strategic Cortex** or the **Sentient Terminal** using global shortcuts at any time, across any application.
 
-## 4. Booting the Foundry Kernel
-
-With the models running in the background, you can now launch the Oasis-Shell OS environment:
-
-```bash
-npm run tauri dev
-```
-
-You should now see the beautifully crafted glassmorphic interface. Press `Ctrl+K` to launch your first Neural Directive!
+- Press `Ctrl + Space` to summon the main Neural UI.
+- Type your first natural language intent, e.g., "Analyze my current window."
