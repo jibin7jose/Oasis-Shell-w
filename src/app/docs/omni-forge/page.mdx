@@ -19,6 +19,13 @@ When you issue a command like *"Create a new React project for a dashboard"*, th
 - **Synthesis Panel (Venture Narrative)**: When planning a new architecture, the AI can generate a "Neural Pitch Synthesis." This produces a Strategic Venture Narrative and Market Correlation analysis. You can seamlessly convert this analysis into a formal "Architectural Audit" that is automatically embedded into your local Vault, or even export it as a pitch PDF directly to your desktop.
 - **`sim`** / **`sandbox`**: Initiates the Strategic Venture Sandbox portal for isolated testing.
 
+#### Polyglot Scaffolding & The Exodus Protocol
+Oasis-Shell acts as a **Polyglot Scaffolding Engine** (`manifest_new_venture`). You can use the prompt to scaffold either a `ReactVite` or `RustTauri` sub-venture autonomously.
+Once ready, the **Exodus Protocol** allows you to natively compile your projects from the UI. The Rust backend explicitly spawns `cargo tauri build` or `npm run build`, streaming standard output and error logs dynamically into a `BUILD_REGISTRY` overlay, effectively acting as an intelligent local CI/CD pipeline.
+
+#### Neural Sandbox Hardening (Resilience Engine)
+Located in `system.rs`, the OS actively runs adversarial simulations against itself (`run_sandbox_audit`). It tests for **Oracle API Timeouts**, **Filesystem IPC Stress**, and **Mutex Thread-Safety Deadlocks** in real-time. If a spawned sub-venture crashes, it detects "Architectural Drift" (zombie processes) and attempts auto-recovery, ensuring the Sentient OS never crashes.
+
 #### Workspace Context Crates & AI Telekinesis
 - **`save workspace`** / **`create crate`** / **`scan workspace`**: Scans all your active applications and auto-generates a "Context Crate" saving your exact layout and active apps.
 - **Context Crate Gallery**: A dedicated graphical interface (`CrateGallery.tsx`) that visually lists all your saved environments. It allows you to "Restore Environment" with a single click, view the apps contained inside the snapshot, and Export the Crate Manifests globally.
