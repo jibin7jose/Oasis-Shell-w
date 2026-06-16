@@ -17,15 +17,13 @@ Using the Neural Command Bar (`Ctrl + K`), you can interact directly with the Va
 - **`find [query]`** / **`search files [query]`** / **`where is [query]`**: Triggers a semantic vector search across all indexed files. Instead of exact keyword matching, Oasis-Shell will find files based on conceptual similarity.
 - **`vault`** / **`open vault`**: Opens the Sentient Vault UI portal for manual browsing and management of your indexed nodes.
 
-### Secure AppData Vaulting & Sorting
-Oasis-Shell allows you to "import a strategic asset". This completely relocates critical files off your public desktop/drives and securely moves them into a native `OasisVault` folder within your OS `AppData/Local` cache. 
-When doing so, the AI automatically sorts the files into logical categories:
-- **Technical**: Rust, Typescript, JS files.
-- **Creative**: Figma, SVG, PNG assets.
-- **Strategic**: Word docs, PDFs, etc.
+### Secure Sentinel Vault & Hardware Identity
+Oasis-Shell allows you to "seal a strategic asset". This completely relocates critical files off your public desktop/drives, encrypts them using `AES-256-GCM`, and securely moves them into a native `OasisVault` folder.
+- **Biometric Hardware Anchor**: To unlock the Sentinel Ledger, the OS natively calls upon a `trigger_biometric_scan` payload. You must explicitly authenticate using Windows Hello or your system fingerprint scanner to prove your physical "Founder Presence" before decrypting the files.
+- **Forensic Audit Trails**: The vault maintains a strict cryptographic ledger, logging all accesses, encryption hashes, and security resonance telemetry to ensure complete integrity.
 
-### Mathematical Neural Graph
-By extracting all active embeddings in your system, Oasis-Shell natively calculates mathematical `cosine_similarity` between every file node in your system. Any two files with a conceptual semantic overlap greater than 50% (`score > 0.5`) are physically mapped to each other using WebGL and Force Graphs (`react-force-graph-3d`). This turns your flat file system into a breathing, 3D, interconnected neural network that you can physically spin and interact with.
+### Mathematical Neural Graph (Strategic Cortex)
+By extracting all active embeddings in your system, Oasis-Shell natively calculates mathematical `cosine_similarity` between every file node in your system. Any two files with a conceptual semantic overlap greater than 50% (`score > 0.5`) are physically mapped to each other. By using the shortcut `Ctrl+Shift+E`, you open the **Strategic Cortex Overlay**—a WebGL 3D Force Graph (`react-force-graph-3d`). This turns your flat file system into a breathing, 3D, interconnected neural network that you can physically spin, inspect, and click on to retrieve RAG summaries of your contexts.
 
 - **Offline First**: All embeddings are calculated locally on your hardware. No data ever goes to the cloud.
 - **Instant Retrieval**: The Neural Intent search bar (`Ctrl + K`) taps directly into this vault.
