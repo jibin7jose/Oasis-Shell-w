@@ -1,0 +1,31 @@
+# Sentient Vault
+
+The Sentient Vault is the core knowledge base of Oasis-Shell. It actively indexes your local files, codebases, and logs into a robust vector database (`file_embeddings`).
+
+## How it works
+
+When you place a file into a tracked project, Oasis-Shell natively processes the file text using Local LLMs (via Ollama + `nomic-embed-text`) to generate semantic vectors.
+
+### Autonomous Background Watcher
+Oasis-Shell utilizes a native Rust file watcher (`notify` crate) that silently runs in the background. It automatically watches your **Documents**, **Downloads**, and **Desktop** directories. The moment you save a file with a supported extension (`.md`, `.txt`, `.rs`, `.ts`, etc.), the OS detects the modification, extracts the text, and seamlessly embeds it into your vector database without any manual indexing required.
+
+You can instantly retrieve information from these files by querying the AI inside the Oasis-Shell terminal without ever leaving your editor. The Vault understands context, language semantics, and project structure.
+
+### Neural Intent Commands for the Vault
+Using the Neural Command Bar (`Ctrl + K`), you can interact directly with the Vault:
+- **`index [folder path]`**: Instructs the OS to recursively scan and semantically index a folder into your local database. (e.g., `index C:\projects\my-app`)
+- **`find [query]`** / **`search files [query]`** / **`where is [query]`**: Triggers a semantic vector search across all indexed files. Instead of exact keyword matching, Oasis-Shell will find files based on conceptual similarity.
+- **`vault`** / **`open vault`**: Opens the Sentient Vault UI portal for manual browsing and management of your indexed nodes.
+
+### Secure AppData Vaulting & Sorting
+Oasis-Shell allows you to "import a strategic asset". This completely relocates critical files off your public desktop/drives and securely moves them into a native `OasisVault` folder within your OS `AppData/Local` cache. 
+When doing so, the AI automatically sorts the files into logical categories:
+- **Technical**: Rust, Typescript, JS files.
+- **Creative**: Figma, SVG, PNG assets.
+- **Strategic**: Word docs, PDFs, etc.
+
+### Mathematical Neural Graph
+By extracting all active embeddings in your system, Oasis-Shell natively calculates mathematical `cosine_similarity` between every file node in your system. Any two files with a conceptual semantic overlap greater than 50% (`score > 0.5`) are physically mapped to each other using WebGL and Force Graphs (`react-force-graph-3d`). This turns your flat file system into a breathing, 3D, interconnected neural network that you can physically spin and interact with.
+
+- **Offline First**: All embeddings are calculated locally on your hardware. No data ever goes to the cloud.
+- **Instant Retrieval**: The Neural Intent search bar (`Ctrl + K`) taps directly into this vault.

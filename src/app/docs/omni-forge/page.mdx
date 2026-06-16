@@ -1,0 +1,29 @@
+# Omni-Vent Forge & Workspace Automation
+
+Oasis-Shell includes a powerful polyglot scaffolding engine called the **Omni-Vent Forge** and native workspace integration. It enables the AI to instantly manifest entirely new application codebases natively on your machine, manage your windows, and automate Git.
+
+## How it works
+
+When you issue a command like *"Create a new React project for a dashboard"*, the Architect Persona invokes the `manifest_new_venture` command.
+
+1. **Venture Mode**: The AI decides if the request requires a web frontend (`ReactVite`) or a native desktop app (`RustTauri`).
+2. **Scaffolding**: It uses native shell execution (`npx create-vite`) to physically scaffold the directory structure on your disk without you touching the terminal.
+3. **Integration**: The newly created "Venture" is instantly tracked by the Oasis-Shell Sentient Vault, embedding all generated code so the AI knows exactly what was created.
+
+### Neural Intent Commands (`Ctrl + K`)
+
+#### Scaffolding & Neural Pitch Synthesis
+- **`create [module]`** / **`architect [module]`** / **`build module [module]`**: Triggers the Architect Persona to dynamically scaffold a new module or strategic venture (e.g., `create payment gateway`).
+- **Synthesis Panel (Venture Narrative)**: When planning a new architecture, the AI can generate a "Neural Pitch Synthesis." This produces a Strategic Venture Narrative and Market Correlation analysis. You can seamlessly convert this analysis into a formal "Architectural Audit" that is automatically embedded into your local Vault, or even export it as a pitch PDF directly to your desktop.
+- **`sim`** / **`sandbox`**: Initiates the Strategic Venture Sandbox portal for isolated testing.
+
+#### Workspace Context Crates & AI Telekinesis
+- **`save workspace`** / **`create crate`** / **`scan workspace`**: Scans all your active applications and auto-generates a "Context Crate" saving your exact layout and active apps.
+- **`launch crate`** / **`open workspace`**: Automatically launches your saved applications to restore your environment instantly.
+- **`arrange`** / **`organize`** / **`snap`** / **`split`**: Triggers **AI Window Telekinesis**. By invoking `organize_workspace`, the native Rust backend leverages low-level Win32 display APIs to calculate your screen bounds and automatically snap and tile your open windows (e.g., Code on the left, Browser on the right) for optimal coding.
+
+#### Autonomous Git Sentinel
+- **`git status`** / **`review code`** / **`commit`** / **`push`**: Activating the Git Sentinel causes the AI to analyze your uncommitted changes, autonomously generate a highly contextual commit message based on the actual diffs, and push your code securely to GitHub.
+
+#### Neural Macros (Ghost in the Machine)
+- **`type [text]`** / **`press [key]`** / **`macro`**: Triggers the `execute_neural_macro` engine. This is not a simple UI wrapper; it injects native OS-level keystroke payloads (e.g., `key:win|sleep:500|text:flights to new york|sleep:800|key:enter`). The AI can physically pilot your computer, open the Start Menu, type complex queries, and navigate menus at superhuman speeds.

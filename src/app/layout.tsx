@@ -10,6 +10,9 @@ const inter = Inter({ subsets: ["latin"] });
 export const metadata: Metadata = {
   title: "Oasis-Shell | Sentient OS",
   description: "A next-generation, AI-driven operating system interface built with Tauri, React, and Rust.",
+  icons: {
+    icon: '/logo.svg',
+  },
 };
 
 export default function RootLayout({
