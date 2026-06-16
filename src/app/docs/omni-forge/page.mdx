@@ -21,6 +21,7 @@ When you issue a command like *"Create a new React project for a dashboard"*, th
 
 #### Workspace Context Crates & AI Telekinesis
 - **`save workspace`** / **`create crate`** / **`scan workspace`**: Scans all your active applications and auto-generates a "Context Crate" saving your exact layout and active apps.
+- **Context Crate Gallery**: A dedicated graphical interface (`CrateGallery.tsx`) that visually lists all your saved environments. It allows you to "Restore Environment" with a single click, view the apps contained inside the snapshot, and Export the Crate Manifests globally.
 - **`launch crate`** / **`open workspace`**: Automatically launches your saved applications to restore your environment instantly.
 - **`arrange`** / **`organize`** / **`snap`** / **`split`**: Triggers **AI Window Telekinesis**. By invoking `organize_workspace`, the native Rust backend leverages low-level Win32 display APIs to calculate your screen bounds and automatically snap and tile your open windows (e.g., Code on the left, Browser on the right) for optimal coding.
 
