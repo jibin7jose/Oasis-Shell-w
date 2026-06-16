@@ -7,10 +7,12 @@ Oasis-Shell gives the AI the ability to act as a system-level Sentinel. It can m
 Oasis-Shell bypasses standard command-line wrappers by integrating directly with core **Win32 APIs** and **ntdll** to achieve zero-latency hardware control.
 
 - **Process Telemetry & Health Score**: A background thread constantly streams system telemetry, extracting CPU, RAM, Network (Up/Down in MB/s), GPU Usage (via `nvidia-smi`), and Disk availability. It calculates a real-time `health_score` by applying penalties for resource overconsumption.
-- **Priority Management**: The AI can dynamically reprioritize processes (e.g., setting a background compiler to "Idle" using `SetPriorityClass`).
+- **Dynamic Priority & Persistent Cache**: The AI can dynamically reprioritize processes (e.g., setting a background compiler to "Idle" using `SetPriorityClass`). The **Priority Cache System** actively stores your custom PID priority overrides and automatically applies them upon subsequent launches (complete with customizable TTL rules and ignore flags).
+- **Forensic Priority Audit Log**: Every priority shift—whether manual or auto-applied—is recorded into a highly detailed cryptographic forensic audit timeline, enabling you to trace exactly when and why CPU allocations were altered.
 - **Aegis Quarantine**: A specialized security routine that forcefully terminates malicious or unwanted processes using exact PID matching.
 - **Deep Process Control**: Oasis-Shell utilizes undocumented/low-level Windows APIs such as `NtSuspendProcess` and `NtResumeProcess` to instantly freeze uncooperative applications without fully killing them.
-- **Productivity Analytics**: Hooks into `GetForegroundWindow` to actively track your `focus_time_seconds` per application, writing this directly into your local SQLite `app_usage_analytics` database.
+- **Visual Sparkline Analytics**: Process memory and CPU curves are beautifully rendered in real-time natively inside the UI via mathematical SVG "Sparklines", visualizing process weight volatility.
+- **Hardware & Power Telemetry**: The panel connects directly to firmware layers to extract low-level Battery Health metrics, including Cycle Counts, Wear Percentages, and precise Thermal Probe readings.
 
 ## The Swarm Daemon (Autonomous Healing)
 
