@@ -27,7 +27,7 @@ export function Features() {
               Think it. Execute it.
             </h2>
             <p className="text-xl text-gray-600 dark:text-gray-400 mb-6 leading-relaxed">
-              Oasis-Shell's Neural Intent Bar replaces traditional search. Type natural language commands and the deterministic local LLM engine translates your intent into system actions natively.
+              Oasis-Shell&apos;s Neural Intent Bar replaces traditional search. Type natural language commands and the deterministic local LLM engine translates your intent into system actions natively.
             </p>
             <ul className="space-y-4">
               <li className="flex items-center gap-3 text-gray-700 dark:text-gray-300 font-medium">
@@ -45,7 +45,7 @@ export function Features() {
             transition={{ duration: 0.6 }}
             className="relative overflow-hidden"
           >
-            <img src="/Screenshot 2026-06-15 111005.png" alt="Oasis-Shell Terminal Integration" className="w-full h-auto rounded-xl shadow-2xl border border-gray-200 dark:border-[#333333]"/>
+            <img src="/image.png" alt="Oasis-Shell Terminal Integration" className="w-full h-auto rounded-xl shadow-2xl border border-gray-200 dark:border-[#333333]"/>
           </motion.div>
         </div>
 
