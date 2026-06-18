@@ -1,0 +1,45 @@
+name: Oasis-Shell CI
+
+on:
+  push:
+    branches: [ main, master ]
+  pull_request:
+    branches: [ main, master ]
+
+jobs:
+  build-frontend:
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: Oasis-Shell(website)
+    steps:
+      - uses: actions/checkout@v3
+      - name: Use Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: '20'
+          cache: 'npm'
+          cache-dependency-path: Oasis-Shell(website)/package-lock.json
+      - run: npm ci
+      - run: npm run lint
+      - run: npm run build
+
+  test-backend:
+    runs-on: windows-latest
+    defaults:
+      run:
+        working-directory: Oasis-Shell/src-tauri
+    steps:
+      - uses: actions/checkout@v3
+      - name: Setup Rust
+        uses: dtolnay/rust-toolchain@stable
+      - uses: Swatinem/rust-cache@v2
+        with:
+          workspaces: Oasis-Shell/src-tauri
+      - name: Install dependencies (Windows)
+        run: |
+          rustup target add x86_64-pc-windows-msvc
+      - name: Run tests
+        run: cargo test
+      - name: Check code formatting
+        run: cargo fmt -- --check
