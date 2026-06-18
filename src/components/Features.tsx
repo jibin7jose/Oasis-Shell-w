@@ -1,7 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { Brain, Command, Eye, Zap, Database, Globe } from "lucide-react";
+import { Brain, Command, Eye, Zap, Database, Globe, Mic } from "lucide-react";
 
 export function Features() {
   return (
@@ -68,16 +68,16 @@ export function Features() {
             className="order-1 lg:order-2"
           >
             <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-indigo-400 to-blue-500 flex items-center justify-center mb-6 shadow-lg">
-              <Eye className="w-6 h-6 text-white" />
+              <Mic className="w-6 h-6 text-white" />
             </div>
             <h2 className="text-4xl md:text-5xl font-bold text-gray-900 dark:text-white mb-6 tracking-tight">
-              Photographic Context.
+              Your Native Jarvis.
             </h2>
             <p className="text-xl text-gray-600 dark:text-gray-400 mb-6 leading-relaxed">
-              Never lose your train of thought. Oasis-Shell automatically captures semantic snapshots of your workflow into the Sentient Vault, allowing you to instantly recall complex "Context Crates".
+              Operate entirely hands-free. Oasis-Shell natively listens for your voice commands, acting as a sentient Jarvis to navigate your OS, execute complex scripts, and automate your workflow with zero friction.
             </p>
             <a href="/docs/architecture" className="inline-flex items-center gap-2 text-indigo-600 dark:text-indigo-400 font-semibold hover:underline">
-              Learn about the Vision Engine →
+              Learn about Voice Telemetry →
             </a>
           </motion.div>
         </div>
