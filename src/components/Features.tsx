@@ -1,7 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { Brain, Command, Eye, Zap, Database, Globe, Mic } from "lucide-react";
+import { Brain, Command, Eye, Zap, Database, Globe, Mic, Folder } from "lucide-react";
 
 export function Features() {
   return (
@@ -21,20 +21,20 @@ export function Features() {
             transition={{ duration: 0.6 }}
           >
             <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-emerald-400 to-teal-500 flex items-center justify-center mb-6 shadow-lg">
-              <Brain className="w-6 h-6 text-white" />
+              <Folder className="w-6 h-6 text-white" />
             </div>
             <h2 className="text-4xl md:text-5xl font-bold text-gray-900 dark:text-white mb-6 tracking-tight">
-              Think it. Execute it.
+              Native File Explorer.
             </h2>
             <p className="text-xl text-gray-600 dark:text-gray-400 mb-6 leading-relaxed">
-              Oasis-Shell&apos;s Neural Intent Bar replaces traditional search. Type natural language commands and the deterministic local LLM engine translates your intent into system actions natively.
+              Oasis-Shell completely replaces your default OS file manager. Navigate your filesystem with lightning speed, utilizing a deeply integrated Rust backend that indexes your files locally for instantaneous semantic search.
             </p>
             <ul className="space-y-4">
-              <li className="flex items-center gap-3 text-gray-700 dark:text-gray-300 font-medium">
-                <Command className="w-5 h-5 text-emerald-500" /> Global shortcut: <kbd className="bg-gray-100 dark:bg-gray-800 px-2 py-1 rounded font-mono text-sm border border-gray-200 dark:border-gray-700 shadow-sm">Ctrl + K</kbd>
+               <li className="flex items-center gap-3 text-gray-700 dark:text-gray-300 font-medium">
+                <Database className="w-5 h-5 text-emerald-500" /> <strong>Sentient Vault:</strong> Automatically embeds files into a local Vector DB.
               </li>
               <li className="flex items-center gap-3 text-gray-700 dark:text-gray-300 font-medium">
-                <Zap className="w-5 h-5 text-teal-500" /> Runs entirely offline on Ollama.
+                <Zap className="w-5 h-5 text-teal-500" /> <strong>Deep OS Hooks:</strong> Direct Win32 filesystem integration.
               </li>
             </ul>
           </motion.div>
